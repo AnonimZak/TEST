@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Твоя IP информация</title>
+    <style>
+        body { background-color: #121212; color: #f0f0f0; font-family: sans-serif; text-align: center; padding: 50px; }
+        .box { background: #1e1e1e; padding: 20px; border-radius: 10px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>IP-информация</h2>
+        <p><strong>IP:</strong> {{ geo.query }}</p>
+        <p><strong>Страна:</strong> {{ geo.country }}</p>
+        <p><strong>Город:</strong> {{ geo.city }}</p>
+        <p><strong>Регион:</strong> {{ geo.regionName }}</p>
+        <p><strong>Провайдер:</strong> {{ geo.isp }}</p>
+        <p><strong>Координаты:</strong> {{ geo.lat }}, {{ geo.lon }}</p>
+        <p><strong>Часовой пояс:</strong> {{ geo.timezone }}</p>
+    </div>
+</body>
+</html>
